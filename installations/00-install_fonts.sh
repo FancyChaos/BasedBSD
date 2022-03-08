@@ -2,8 +2,8 @@
 # Install fonts
 # This takes a long time rn, because we clone the whole nerd font repo
 
-# Clone repo
-cd /tmp/
+# Clone repo into the main repo
+cd $SCRIPTPATH
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts/
 
