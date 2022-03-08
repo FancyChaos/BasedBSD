@@ -1,0 +1,80 @@
+[colors]
+    background = "#0f1013"
+    foreground = "#eac094"
+    frame_color = "#b55945"
+
+[global]
+    ### Display ###
+    monitor = 0
+    follow = keyboard
+
+    origin = "top-center"
+    separator_height = 2
+    padding = 12
+    horizontal_padding = 12
+    frame_width = 2
+    corner_radius = 8
+    offset = 0x0
+    width = (300, 800)
+
+    idle_threshold = 120
+    mouse_right_click = close_current
+
+    ### Text ###
+    font = Fira Code Nerd Font 16
+
+    markup = full
+
+    # The format of the message.  Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %n  progress value if set without any extra characters
+    #   %%  Literal %
+    # Markup is allowed
+    format = "<b>%s </b>\n%b"
+    alignment = center
+    show_age_threshold = 60
+
+
+    ### Misc/Advanced ###
+    browser = /usr/bin/firefox
+    always_run_script = true
+    title = Dunst
+
+[experimental]
+    per_monitor_dpi = false
+
+[shortcuts]
+    close = ctrl+shift+space
+    history = ctrl+space
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = colors.background
+    foreground = colors.foreground
+    timeout = 5
+
+[urgency_normal]
+    background = colors.background
+    foreground = colors.foreground
+    timeout = 5
+
+[urgency_critical]
+    background = colors.background
+    foreground = colors.foreground
+    frame_color = "#F5292E"
+    timeout = 8
+
+[spotify]
+    appname = Spotify
+    timeout = 5
+    frame_color = "#3DDC97"
+
+[thunderbird]
+    appname = Thunderbird
+    timeout = 5
+    frame_color = "#197278"
+

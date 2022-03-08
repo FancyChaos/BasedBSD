@@ -1,0 +1,2 @@
+#!/bin/sh
+xlock -mode space -sound -timeout 1 -username "User: " -password "PW: " -info ""

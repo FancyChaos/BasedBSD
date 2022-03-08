@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. /etc/fos/config/fos_shell_settings
+
+while :
+do
+    cpu=$(sb-cpu)
+    cpu_temp=$(sb-cpu_temp)
+    disk=$(sb-disk)
+    bat=$(sb-battery)
+    clock=$(sb-clock)
+    printf "%s | %s | %s | %s\n" "$cpu" "$cpu_temp" "$bat" "$clock"
+    sleep 3
+done

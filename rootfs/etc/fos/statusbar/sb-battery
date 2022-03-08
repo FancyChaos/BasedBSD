@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Get left over capacity
+percentage=$(apm -l)
+
+# Check A/C Status
+# 0 = Disconnected
+# 1 = Connected
+# 2 = Backup power source
+# 255 = Unknown
+case $(apm -a) in
+	0 )
+		powerstatus="ﮤ" ;;
+	1 )
+		powerstatus="ﮣ" ;;
+	* )
+		powerstatus="?" ;;
+esac
+
+printf "%s %d%%" $powerstatus $percentage
