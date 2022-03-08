@@ -9,6 +9,6 @@ cd nerd-fonts/
 
 chmod +x install.sh
 # Install fonts of choice here
-./install.sh FiraCode
-./install.sh FiraMono
-./install.sh Hack
+./install.sh -q FiraCode
+./install.sh -q FiraMono
+./install.sh -q Hack
