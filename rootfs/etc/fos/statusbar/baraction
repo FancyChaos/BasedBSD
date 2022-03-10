@@ -5,10 +5,10 @@
 while :
 do
     cpu=$(sb-cpu)
-    cpu_temp=$(sb-cpu_temp)
-    disk=$(sb-disk)
+    cputemp=$(sb-cputemp)
+    cpuspeed=$(sb-cpuspeed)
     bat=$(sb-battery)
     clock=$(sb-clock)
-    printf "%s | %s | %s | %s\n" "$cpu" "$cpu_temp" "$bat" "$clock"
-    sleep 3
+    printf "%s | %s | %s | %s | %s\n" "$cpu" "$cpuspeed" "$cputemp" "$bat" "$clock"
+    sleep 2
 done

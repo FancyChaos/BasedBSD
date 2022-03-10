@@ -9,12 +9,22 @@ percentage=$(apm -l)
 # 2 = Backup power source
 # 255 = Unknown
 case $(apm -a) in
-	0 )
-		powerstatus="ﮤ" ;;
-	1 )
-		powerstatus="ﮣ" ;;
-	* )
-		powerstatus="?" ;;
+    0 )
+        powerstatus="ﮤ" ;;
+    1 )
+        powerstatus="ﮣ" ;;
+    * )
+        powerstatus="?" ;;
 esac
+
+# Warn constantly when under 15%
+lockfile="/tmp/sb-battery-low"
+if [ "$powerstatus" != "ﮣ" ] && [ "$percentage" -le 15 ] && [ ! -f "$lockfile" ]
+then
+    touch $lockfile
+    notify-send -u critical -t 8000 -h int:value:"$percentage" -h string:hlcolor:"#F5292E" "I'am low on health!"
+    sleep 60 && rm $lockfile &
+fi
+
 
 printf "%s %d%%" $powerstatus $percentage

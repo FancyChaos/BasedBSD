@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Status bar module for disk space
-
-printf "%s %s" "" "$(df -h /home | awk ' /[0-9]/ {print $3 "/" $2}')"

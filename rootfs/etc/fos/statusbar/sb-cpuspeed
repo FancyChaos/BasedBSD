@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cpuspeed=$(sysctl -n hw.cpuspeed)
+
+printf "%s %sMHz" "龍" "$cpuspeed"

@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cpustat=$(systat -B cpu 1 | awk "NF" | tail -n +3 | sed "/-/d" | awk '{print $2}' | tr "\n" " " | sed 's/.$//')
+cpustat=$(systat -B cpu 1 | awk "NF" | tail -n +3 | sed "/-/d" | awk '{print $7}' | tr "\n" " " | sed 's/.$//')
 
 printf "%s %s" "" "$cpustat"
