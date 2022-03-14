@@ -15,8 +15,9 @@ export XDG_CONFIG_DIRS=/etc/xdg
 export BROWSER=firefox
 export SHELL=zsh
 export TERMINAL=st
+export TERM=xterm-256color
 export EDITOR=nvim
-export MANPAGER="bat --paging=always"
+export MANPAGER='bat --paging=always'
 
 # Paths
 export PATH=$PATH:$HOME/bin:/usr/local/bin
@@ -29,18 +30,19 @@ export WALLPAPER=/etc/fos/wallpapers/vhs_girl.png
 export XENODM_WALLPAPER=/etc/fos/wallpapers/vhs_girl.png
 
 # Aliases
-alias b="bat"
-alias v="nvim"
-alias c="nvim +Calendar"
-alias lgrep="grep --line-buffered"
-alias l="ls -lahrt"
-alias cf="copyfile"
+alias b='bat'
+alias v='nvim'
+alias c='nvim +Calendar'
+alias lgrep='grep --line-buffered'
+alias l='ls -lahrt'
+alias cf='copyfile'
 # Write own replacement command for OpenBSD
-alias cpp="copypath"
-alias m="make"
-alias mc="rm -f config.h ; make"
-alias mi="doas make install"
-alias rr="ranger"
+alias cpp='copypath'
+alias m='make'
+alias mc='rm -f config.h ; make'
+alias mi='doas make install'
+alias rr='ranger'
+alias vv='nvim $(fzf)'
 
 # serversync (very custom)
 alias ssync="rsync -zav -e 'ssh -p 1337' --progress"
