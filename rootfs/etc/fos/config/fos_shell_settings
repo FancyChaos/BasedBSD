@@ -28,6 +28,7 @@ export PATH=$PATH:/usr/local/go/bin
 # Custom use exports
 export WALLPAPER=/etc/fos/wallpapers/vhs_girl.png
 export XENODM_WALLPAPER=/etc/fos/wallpapers/vhs_girl.png
+export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border sharp --color dark'
 
 # Aliases
 alias b='bat'
@@ -42,7 +43,11 @@ alias m='make'
 alias mc='rm -f config.h ; make'
 alias mi='doas make install'
 alias rr='ranger'
-alias vv='nvim $(fzf)'
+alias f='fzf'
+alias ff='fzf --height 100% --preview "head -n 50 {}" --preview-window down'
+alias fv='nvim $(f)'
+alias fvv='nvim $(ff)'
+alias fcd='cd $(dirname $(f))'
 
 # serversync (very custom)
 alias ssync="rsync -zav -e 'ssh -p 1337' --progress"
