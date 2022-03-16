@@ -68,4 +68,7 @@ ssh-keygen -q -f $HOME/.ssh/git_key -t ecdsa -b 521 -N ""
 doas rcctl enable apmd
 doas rcctl set apmd flags -A
 
+# Disable sshd
+doas rcctl disable sshd
+
 echo "Everything done. Reboot to enjoy your system"

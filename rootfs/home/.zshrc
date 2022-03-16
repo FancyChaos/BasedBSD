@@ -79,7 +79,6 @@ plugins=(
 	copyfile
 	copybuffer
 	dirhistory
-#	autojump
 )
 . $ZSH/oh-my-zsh.sh
 
@@ -89,8 +88,15 @@ autoload -U compinit && compinit -u
 
 # Edit spaceship stuff (theme)
 export SPACESHIP_EXIT_CODE_SHOW=true
-export SPACESHIP_TIME_SHOW=true
 export SPACESHIP_GIT_BRANCH_COLOR=green
+export SPACESHIP_CHAR_SYMBOL='> '
+SPACESHIP_PROMPT_ORDER=(
+    dir
+    git
+    pyenv
+    line_sep
+    char
+)
 
 # Keybindings
 bindkey '^[[A' history-substring-search-up
