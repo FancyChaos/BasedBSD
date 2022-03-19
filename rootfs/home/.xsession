@@ -1,3 +1,7 @@
+# Load Xresources
+xrdb -merge ~/.Xresources
+
+# Load fos defaults
 . /etc/fos/config/fos_shell_settings
 
 # Set Keyboard to germab
