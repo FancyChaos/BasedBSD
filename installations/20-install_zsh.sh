@@ -34,6 +34,6 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 
 # Install autojump
 cd /tmp/
-git clone git://github.com/wting/autojump.git
+git clone https://www.github.com/wting/autojump.git
 cd autojump/
 SHELL=bash python3 install.py
