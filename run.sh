@@ -20,6 +20,9 @@ doas pkg_add -l packages
 # python -> python3
 doas ln -s /usr/local/bin/python3 /usr/local/bin/python
 
+# User modifications
+doas user mod -G wsrc $USER
+
 # Make sure installation scripts are executable
 chmod +x installations/*
 
