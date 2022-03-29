@@ -1,4 +1,4 @@
-*background: #1E1E2E
+*background: #7f8c98
 *foreground: #abb2bf
 
 ! Gray
@@ -26,8 +26,8 @@
 *color13: #B8A1E3
 
 ! Pink
-*color6: #D67AD2
-*color14: #DF97DB
+*color6: #61afef
+*color14: #84CEE4
 
 ! Whites
 *color7: #dfdfe0
