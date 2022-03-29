@@ -116,7 +116,7 @@ float alpha = 0.7;
  *
  * Name : Catppuccin
  * author : tsjazil (https://github.com/tsjazil)
- * 
+ *
  * Soothing pastel theme for the high-spirited!
  *
  */
@@ -125,29 +125,30 @@ float alpha = 0.7;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#6E6C7E",
-	"#F28FAD",
-	"#ABE9B3",
-	"#FAE3B0",
+	"#393b44",
+	"#c94f6d",
+	"#97c374",
+	"#dbc074",
 	"#96CDFB",
-	"#F5C2E7",
-	"#89DCEB",
-	"#D9E0EE",
+	"#c678dd",
+	"#61afef",
+	"#dfdfe0",
 
 	/* 8 bright colors */
-	"#988BA2",
-	"#F28FAD",
-	"#ABE9B3",
-	"#FAE3B0",
+	"#7f8c98",
+	"#e06c75",
+	"#58cd8b",
+	"#FFE37E",
 	"#96CDFB",
-	"#F5C2E7",
-	"#89DCEB",
-	"#D9E0EE",
+	"#B8A1E3",
+	"#84CEE4",
+	"#FDEBC3",
 
 
 
-        [256] = "#D9E0EE", /* default foreground colour */
-        [257] = "#1E1E2E", /* default background colour */
+        [256] = "#abb2bf", /* default foreground colour */
+        //[257] = "#1E1E2E", /* default background colour */
+        [257] = "#000000", /* default background colour */
         [258] = "#C3BAC6", /*575268*/
 
 };
