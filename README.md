@@ -10,7 +10,7 @@ This repo contains configurations and install scripts to customize a fresh insta
  5. Execute the *run.sh* script
 	 > chmod +x run.sh && ./run.sh
 6. The script will exit normally when everything is done. Now restore your */etc/doas.conf* configuration if previously changed and reboot the system
-	> doas shutdown -p now
+	> doas shutdown -r now
 
 ## Thanks
 Big thanks to anyone I stole scripts, wallpapers or code snippets from.

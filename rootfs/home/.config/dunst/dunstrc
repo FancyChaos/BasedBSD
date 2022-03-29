@@ -1,7 +1,7 @@
 [colors]
     background = "#0f1013"
-    foreground = "#eac094"
-    frame_color = "#b55945"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
 
 [global]
     ### Display ###
@@ -40,7 +40,7 @@
 
 
     ### Misc/Advanced ###
-    browser = /usr/bin/firefox
+    browser = /usr/local/bin/firefox
     always_run_script = true
     title = Dunst
 
@@ -53,18 +53,12 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = colors.background
-    foreground = colors.foreground
     timeout = 5
 
 [urgency_normal]
-    background = colors.background
-    foreground = colors.foreground
     timeout = 5
 
 [urgency_critical]
-    background = colors.background
-    foreground = colors.foreground
     frame_color = "#F5292E"
     timeout = 8
 
