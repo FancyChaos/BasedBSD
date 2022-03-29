@@ -112,47 +112,55 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 0.7;
 
+/*
+ *
+ * Name : Catppuccin
+ * author : tsjazil (https://github.com/tsjazil)
+ * 
+ * Soothing pastel theme for the high-spirited!
+ *
+ */
+
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#6f6f6f",
-	"#F5292E",
-        "#3DDC97",
-	"#D7B377",
-	"#197278",
-	"#D81159",
-	"#80DED9",
-	"gray90",
+	"#6E6C7E",
+	"#F28FAD",
+	"#ABE9B3",
+	"#FAE3B0",
+	"#96CDFB",
+	"#F5C2E7",
+	"#89DCEB",
+	"#D9E0EE",
 
-        /* 8 bright colors */
-        "#6f6f6f",
-        "#F5292E",
-        "#3DDC97",
-        "#D7B377",
-        "#197278",
-        "#D81159",
-        "#80DED9",
-        "gray90",
+	/* 8 bright colors */
+	"#988BA2",
+	"#F28FAD",
+	"#ABE9B3",
+	"#FAE3B0",
+	"#96CDFB",
+	"#F5C2E7",
+	"#89DCEB",
+	"#D9E0EE",
 
-	[255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	[256] = "#add8e6", /* 256 -> cursor */
-	[257] = "#555555", /* 257 -> rev cursor*/
-	[258] = "#000000", /* 258 -> bg */
-	[259] = "#ebdbb2", /* 259 -> fg */
+
+        [256] = "#D9E0EE", /* default foreground colour */
+        [257] = "#1E1E2E", /* default background colour */
+        [258] = "#C3BAC6", /*575268*/
 
 };
 
 
 /*
- * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 259;;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
+
 
 /*
  * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81

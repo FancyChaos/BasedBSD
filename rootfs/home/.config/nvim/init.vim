@@ -11,6 +11,7 @@ Plug 'ziglang/zig.vim'
 Plug 'itchyny/calendar.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'chrisbra/Colorizer'
+Plug 'Pocco81/Catppuccino.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -190,5 +191,17 @@ set softtabstop=0 expandtab shiftwidth=4 smarttab
 " Execute commands
 autocmd VimEnter * ColorHighlight
 
-highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$/
+
+lua << EOF
+local catppuccin = require("catppuccin")
+
+-- configure it
+catppuccin.setup({
+    transparent_background = true
+})
+EOF
+
+colorscheme catppuccin
+
+highlight RedundantSpaces ctermbg=red guibg=red
