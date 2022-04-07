@@ -25,11 +25,11 @@ export GIT_COMMITTER_EMAIL='Felixs.Developer@tutanota.com'
 
 # General exports
 export BROWSER=firefox
-export SHELL=zsh
+export SHELL=bash
 export TERMINAL=st
 export TERM=xterm-256color
 export EDITOR=nvim
-export MANPAGER='bat --paging=always'
+export MANPAGER='bat --theme ansi --paging=always'
 
 # Custom use exports
 export WALLPAPER=/etc/fos/wallpapers/vhs_girl.png
@@ -37,11 +37,12 @@ export XENODM_WALLPAPER=/etc/fos/wallpapers/vhs_girl.png
 export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border sharp --color dark'
 
 # Aliases
-alias b='bat'
+alias b='bat --theme ansi'
 alias v='nvim'
 alias c='nvim +Calendar'
 alias lgrep='grep --line-buffered'
-alias l='ls -lahrt'
+alias ls='exa'
+alias l='exa -la'
 alias cf='copyfile'
 # Write own replacement command for OpenBSD
 alias cpp='copypath'

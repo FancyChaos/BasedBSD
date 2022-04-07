@@ -25,7 +25,6 @@ unzip--
 vim--no_x11
 xclip--
 xsel--
-zsh--
 xdg-user-dirs--
 rsync--
 spectrwm--
@@ -34,3 +33,4 @@ cmixer--
 pkglocatedb--
 nmap--
 fzf--
+exa--

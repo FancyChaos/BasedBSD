@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'vim-airline/vim-airline'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ziglang/zig.vim'
 Plug 'itchyny/calendar.vim'
 Plug 'scrooloose/nerdtree'
@@ -18,6 +18,8 @@ call plug#end()
 
 set number
 set mouse=v
+
+" ## START COC CONFIG ##
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -127,6 +129,9 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
+
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
@@ -154,13 +159,13 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Format :call CocActionAsync('format')
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -185,13 +190,13 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" ## END COC CONFIG ##
+
 " Setup tab key
 set softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Execute commands
 autocmd VimEnter * ColorHighlight
-
-match RedundantSpaces /\s\+$/
 
 lua << EOF
 local catppuccin = require("catppuccin")
@@ -204,4 +209,5 @@ EOF
 
 colorscheme catppuccin
 
+match RedundantSpaces /\s\+$/
 highlight RedundantSpaces ctermbg=red guibg=red
