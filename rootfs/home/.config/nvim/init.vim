@@ -11,7 +11,7 @@ Plug 'ziglang/zig.vim'
 Plug 'itchyny/calendar.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'chrisbra/Colorizer'
-Plug 'Pocco81/Catppuccino.nvim'
+Plug 'liuchengxu/space-vim-dark'
 
 " Initialize plugin system
 call plug#end()
@@ -198,16 +198,30 @@ set softtabstop=0 expandtab shiftwidth=4 smarttab
 " Execute commands
 autocmd VimEnter * ColorHighlight
 
-lua << EOF
-local catppuccin = require("catppuccin")
+" Colorscheme
+colorscheme space-vim-dark
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
--- configure it
-catppuccin.setup({
-    transparent_background = true
-})
-EOF
 
-colorscheme catppuccin
+" Hotkeys
+nmap <C-f> :NERDTreeToggle<CR>
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+nmap <C-j> gT
+nmap <C-k> gt
+
+
+" autocmds
+autocmd VimEnter * NERDTree | wincmd p
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 match RedundantSpaces /\s\+$/
 highlight RedundantSpaces ctermbg=red guibg=red

@@ -1,34 +1,36 @@
-*background: #7f8c98
-*foreground: #abb2bf
+! Xft.dpi: 189
 
-! Gray
-*color0: #393b44
-*color8: #7f8c98
+*.background: #7f8c98
+*.foreground: #abb2bf
 
-! Red
-*color1: #c94f6d
-*color9: #e06c75
+!. Gray
+*.color0: #393b44
+*.color8: #7f8c98
 
-! Green
-*color2: #97c374
-*color10: #58cd8b
+!. Red
+*.color1: #c94f6d
+*.color9: #e06c75
 
-! Yellow
-*color3: #dbc074
-*color11: #FFE37E
+!. Green
+*.color2: #97c374
+*.color10: #58cd8b
 
-! Blue
-*color4: #61afef
-*color12: #84CEE4
+!. Yellow
+*.color3: #dbc074
+*.color11: #FFE37E
 
-! Maguve
-*color5: #c678dd
-*color13: #B8A1E3
+!. Blue
+*.color4: #61afef
+*.color12: #84CEE4
 
-! Pink
-*color6: #61afef
-*color14: #84CEE4
+!. Maguve
+*.color5: #c678dd
+*.color13: #B8A1E3
 
-! Whites
-*color7: #dfdfe0
-*color15: #FDEBC3
+!. Pink
+*.color6: #61afef
+*.color14: #84CEE4
+
+!. Whites
+*.color7: #dfdfe0
+*.color15: #FDEBC3
