@@ -44,13 +44,13 @@ doas chmod -R +x /etc/fos/bin/*
 doas chmod -R +x /etc/fos/statusbar/*
 
 # Compile applications under applications/
-for app in $(find applications/ -type f -name 'build.sh'); do
-    echo "Execting build script: " "$app"
-    dir=$(dirname $app)
-    cd $dir
-    ./build.sh
-    cd $SCRIPTPATH
-done
+#for app in $(find applications/ -type f -name 'build.sh'); do
+#    echo "Execting build script: " "$app"
+#    dir=$(dirname $app)
+#    cd $dir
+#    ./build.sh
+#    cd $SCRIPTPATH
+#done
 
 # Execute install scripts under installations/
 for install_script in $(find installations/ -type f | sort); do
