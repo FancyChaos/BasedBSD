@@ -2,4 +2,4 @@
 
 cpustat=$(systat -B cpu 1 | awk '/^[1-9]/ { print 100-$7"%" }' | tr '\n' ' ' | sed 's/.$//')
 
-printf "%s %s" "" "$cpustat"
+printf "%s %s" "" "$cpustat"

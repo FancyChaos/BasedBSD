@@ -214,7 +214,7 @@ nmap <C-k> gt
 
 
 " autocmds
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.

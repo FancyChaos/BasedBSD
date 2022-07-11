@@ -1,0 +1,8 @@
+#!/bin/sh
+
+avail=$(dmesg | grep -i mem | grep avai | tail -n 1 | awk '{ print $4 }')
+avail=$((avail/1024/1024))
+curr=$(vmstat | tail -n 1 | awk '{ print $3 '})
+
+
+printf "%s %s/%sM" "" "$curr" "$avail"
