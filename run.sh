@@ -8,6 +8,9 @@ echo "Please add the 'nopass' option to your /etc/doas.conf config for the insta
 printf "Continue? (y/N): "
 read confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
+# install bash first
+doas pkg_add bash
+
 # Set default shell to bash
 chsh -s $(which bash)
 

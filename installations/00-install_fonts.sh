@@ -4,6 +4,7 @@
 
 # Clone repo into the main repo
 cd $SCRIPTPATH
+[ -d nerd-fonts ] && exit 0
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts/
 

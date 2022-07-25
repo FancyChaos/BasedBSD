@@ -1,8 +1,11 @@
 # BasedBSD
-This repo contains configurations and install scripts to customize a fresh installed OpenBSD to my liking.
+This repo contains configurations and install scripts to customize a fresh
+installed OpenBSD to my liking.
 
 ## Installation
- 1. Setup doas for root priviliges. Its a lot more convenient when adding the 'nopass' option to your */etc/doas.conf* configuration for the installation process. Remove the option afterwards or replace it with 'persist' for example.
+ 1. Setup doas for root priviliges. Its a lot more convenient when adding the
+ 'nopass' option to your */etc/doas.conf* configuration for the installation process.
+ Remove the option afterwards or replace it with 'persist' for example.
  2. Install git
 	 > doas pkg_add git
  3. Clone this repository and *cd* into it
