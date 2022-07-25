@@ -27,7 +27,6 @@ xclip--
 xsel--
 xdg-user-dirs--
 rsync--
-spectrwm--
 keepassxc--
 cmixer--
 pkglocatedb--
@@ -35,3 +34,4 @@ nmap--
 fzf--
 exa--
 flameshot--
+mpv--

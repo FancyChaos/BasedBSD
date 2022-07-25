@@ -22,5 +22,6 @@ fwallpaper
 # Disable touchpad on keyboard input
 syndaemon -i 0.5 -t -K -R -d
 
-# Finally start glorious spectrwm
-exec spectrwm
+# Finally start kissbar and kisswm
+kissbar -wn &
+exec kisswm
