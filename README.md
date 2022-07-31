@@ -11,7 +11,7 @@ installed OpenBSD to my liking.
  3. Clone this repository and *cd* into it
 	 > git clone https://github.com/FancyChaos/BasedBSD.git && cd BasedBSD
  5. Execute the *run.sh* script
-	 > chmod +x run.sh && ./run.sh
+	 > chmod +x bin/run.sh && bin/run.sh
 6. The script will exit normally when everything is done. Now restore your */etc/doas.conf* configuration if previously changed and reboot the system
 	> doas shutdown -r now
 

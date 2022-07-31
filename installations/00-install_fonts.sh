@@ -4,9 +4,14 @@
 
 # Clone repo into the main repo
 cd $SCRIPTPATH
-[ -d nerd-fonts ] && exit 0
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts/
+if [ -d nerd-fonts ]
+then
+    cd nerf-font/
+    git pull origin master
+else
+    git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+    cd nerd-fonts/
+fi
 
 chmod +x install.sh
 # Install fonts of choice here

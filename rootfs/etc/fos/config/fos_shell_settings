@@ -25,10 +25,10 @@ export GIT_COMMITTER_EMAIL='Felixs.Developer@tutanota.com'
 
 # General exports
 export BROWSER=firefox
-export SHELL=bash
-export TERMINAL=st
+export SHELL=$(which bash)
+export TERMINAL=$(which st)
+export EDITOR=$(which nvim)
 export TERM=xterm-256color
-export EDITOR=nvim
 export MANPAGER='bat --theme ansi --paging=always'
 
 # Custom use exports

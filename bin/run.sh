@@ -8,6 +8,9 @@ echo "Please add the 'nopass' option to your /etc/doas.conf config for the insta
 printf "Continue? (y/N): "
 read confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
+# Kill statusbar (Because of reinstall)
+pkill kissbar || true
+
 # install bash first
 doas pkg_add bash
 
@@ -71,7 +74,7 @@ git config --global user.email "Felixs.Developer@tutanota.com"
 git config --global user.name "FancyChaos"
 
 # Generate generic key for later git access
-ssh-keygen -q -f $HOME/.ssh/git_key -t ecdsa -b 521 -N ""
+[ ! -f $HOME/.ssh/git_key ] && ssh-keygen -q -f $HOME/.ssh/git_key -t ecdsa -b 521 -N ""
 
 # Enable apmd
 doas rcctl enable apmd
