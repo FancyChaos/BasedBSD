@@ -6,7 +6,7 @@
 cd $SCRIPTPATH
 if [ -d nerd-fonts ]
 then
-    cd nerf-font/
+    cd nerd-fonts/
     git pull origin master
 else
     git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git

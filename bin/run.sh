@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ### Get path of script
-SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+SCRIPTPATH=$(pwd -P)
 export SCRIPTPATH
 
 echo "Please add the 'nopass' option to your /etc/doas.conf config for the installation to avoid re-entering the password"
