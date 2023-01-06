@@ -10,8 +10,8 @@ setxkbmap de
 # Start ssh-agent
 eval `ssh-agent -s`
 
-# Start compositor for
-picom --unredir-if-possible --experimental-backends --vsync &
+# Start compositor
+picom --vsync &
 
 # Start notification daemon
 dunst &

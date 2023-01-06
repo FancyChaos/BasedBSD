@@ -32,6 +32,7 @@ cmixer--
 pkglocatedb--
 nmap--
 fzf--
-exa--
 flameshot--
 mpv--
+xdotool--
+gmake--
