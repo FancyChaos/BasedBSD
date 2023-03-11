@@ -23,5 +23,5 @@ fwallpaper
 syndaemon -i 0.5 -t -K -R -d
 
 # Finally start kissbar and kisswm
-kissbar -wn &
+kissbar -w &
 exec kisswm
